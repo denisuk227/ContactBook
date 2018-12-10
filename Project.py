@@ -44,7 +44,7 @@ def hack_the_NASA():
   print(' ')
   checker4 = int(input('Хочешь сделать ещё что-нибудь? Введи 1: '))
   print(' ')
-  if chekcher4 == 1:
+  if checker4 == 1:
     start_of_program()
   checker4 = 0
 
@@ -57,7 +57,7 @@ def show_contacts():
   print(' ')
   checker3 = int(input('Хочешь сделать ещё что-нибудь? Введи 1: '))
   print(' ')
-  if chekcher3 == 1:
+  if checker3 == 1:
     start_of_program()
   checker3 = 0
 
