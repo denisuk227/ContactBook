@@ -9,9 +9,11 @@ print(' ')
 test2 = 0
 try:
   test1 = 'Наталья'
-  test = open('Names.txt', 'r', encoding='windows-1251').read()
-  if test1 not in test:
+  test = open('Names.txt', 'r', encoding='windows-1251')
+  file = test.read()
+  if test1 not in file:
     pass
+  test.close()
 except FileNotFoundError:
   print('Внимание! Программа не обнаружила файла Names.txt в директории с программой')
   print(' ')
@@ -81,8 +83,10 @@ def show_contacts():
 #Функция, заполняющая словарь контактами (Функция №5)
 def napolnitel():
   count_of_contacts = int(input('Введите количество контактов для наполнения: '))
-  file_with_names = open('Names.txt', 'r').read()
-  names = file_with_names.split()  
+  file_with_names1 = open('Names.txt', 'r', encoding='windows-1251')
+  file_with_names2 = file_with_names1.read()
+  file_with_names1.close()
+  names = file_with_names2.split()  
   for counter1 in range(count_of_contacts):
     new_contact_name = names[randint(0, 1340)]
     new_contact_phone = '+' + str(randint(79000000000, 79999999999))
