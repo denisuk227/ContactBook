@@ -83,12 +83,15 @@ def show_contacts():
 #Функция, заполняющая словарь контактами (Функция №5)
 def napolnitel():
   count_of_contacts = int(input('Введите количество контактов для наполнения: '))
+  if count_of_contacts > 1339:
+    print('Возможно добавить только 1339 контактов.')
+    count_of_contacts = 1339
   file_with_names1 = open('Names.txt', 'r', encoding='windows-1251')
   file_with_names2 = file_with_names1.read()
   file_with_names1.close()
   names = file_with_names2.split()  
   for counter1 in range(count_of_contacts):
-    new_contact_name = names[randint(0, 1340)]
+    new_contact_name = names[randint(0, 1339)]
     new_contact_phone = '+' + str(randint(79000000000, 79999999999))
     new_contact_key = {new_contact_name : new_contact_phone}
     contacts.update(new_contact_key)
