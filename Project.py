@@ -8,8 +8,8 @@ print(' ')
 #Тест на то, есть ли в директории с программой файл с именем (Names.txt)
 test2 = 0
 try:
-  test1 = 'Наташа'
-  test = open('Names.txt', 'r').read()
+  test1 = 'Наталья'
+  test = open('Names.txt', 'r', encoding='windows-1251').read()
   if test1 not in test:
     pass
 except FileNotFoundError:
